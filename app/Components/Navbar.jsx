@@ -36,7 +36,7 @@ const Navbar = () => {
           </Link>
 
           {session?.user.role === "admin" && status == "authenticated" ? (
-            <Link href="Admin" className="cursor-pointer ">
+            <Link href={`/admin?id=${session.user.id}`} className="cursor-pointer ">
               <div>Admin</div>
             </Link>
           ) : (

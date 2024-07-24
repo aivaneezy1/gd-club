@@ -27,7 +27,7 @@ export const POST = async (request) => {
           Bucket: "gd-pictures",
           Key: folderKey,
           Body: "", // Empty body
-          ContentType: "application/x-directory", // Optional: Treating it as a directory
+          ContentType: "application/x-directory",
         })
       );
       return NextResponse.json(
