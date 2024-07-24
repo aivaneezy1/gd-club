@@ -10,12 +10,17 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.617.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.4",
     "mime": "^4.0.4",
     "mongoose": "^8.5.1",
     "next": "14.2.5",
     "next-auth": "^4.24.7",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-medium-image-zoom": "^5.2.8",
+    "react-zoom-pan-pinch": "^3.6.1"
   },
   "devDependencies": {
     "eslint": "^8",

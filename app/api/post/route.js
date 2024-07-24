@@ -38,3 +38,16 @@ export const POST = async (request) => {
     return new NextResponse("Method is not allowed", { status: 405 });
   }
 };
+
+
+
+export const GET = async (request, { params }) => {
+  try {
+    await connectDB();
+    const posts = await Post.find({}).lean();
+    return new NextResponse(JSON.stringify(posts), { status: 200 });
+  } catch (err) {
+    console.error("Database connection error: ", err);
+    return new NextResponse("Error in connecting to the database " + err.message,{ status: 500 });
+  }
+};
