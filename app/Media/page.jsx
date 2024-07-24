@@ -1,11 +1,12 @@
-import React from 'react'
+"use client";
+import React,{useState} from "react";
 
-const page = () => {
-  return (
+const MediaPage = () => {
+  return(
     <div>
-      media page
+    media test
     </div>
   )
-}
+};
 
-export default page
+export default MediaPage;
