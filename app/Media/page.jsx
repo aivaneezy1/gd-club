@@ -51,7 +51,7 @@ const MediaPage = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
         {postdata.length > 0 ? (
           postdata.map((post, index) => (
-            <Link  href={`/Media/${post._id}?postid=${post._id}`}>
+            <Link  href={`/Media/${post.title}?title=${post.title}&postid=${post._id}`}>
               <div
                 key={index}
                 className="flex flex-col justify-center items-center bg-white p-4 rounded-lg border-8 border-yellow-600  cursor-pointer hover:shadow-2xl transform hover:scale-105 transition-transform duration-300"
