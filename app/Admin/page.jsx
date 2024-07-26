@@ -1,13 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense } from "react";
 import AdminComponent from "../Components/Admin";
+
 const Adminpage = () => {
-  return(
+  return (
     <div>
-    <AdminComponent/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <AdminComponent />
+      </Suspense>
     </div>
-  )
- 
+  );
 };
 
 export default Adminpage;
