@@ -5,6 +5,8 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import BasicModal from "@/app/utils/zoom";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 const Page = () => {
   const [postData, setPostData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -67,7 +69,7 @@ const Page = () => {
       <div className="bg-black p-4">
         <div className="flex justify-center items-center mt-5">
           <h2 className="text-3xl text-yellow-500 font-bold border-b-4 border-double border-yellow-400">
-            title
+            {paramsTitle}
           </h2>
         </div>
       </div>
@@ -123,7 +125,6 @@ const Page = () => {
                   <BasicModal image={img} />
                 </div>
               )}
-
 
               {/*To change the delete button */}
               {/*Delete button */}
