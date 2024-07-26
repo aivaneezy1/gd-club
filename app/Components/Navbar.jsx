@@ -1,7 +1,12 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import BasicMenu from "./Hamburger";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 const Navbar = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
   return (
     <>
       <div className="bg-black p-8 flex flex-row justify-between items-center text-white gap-20">
@@ -19,25 +24,55 @@ const Navbar = () => {
             </svg>
           </div>
         </Link>
-       
+
         <div className="sm:ml-auto hidden sm:block sm:flex sm:flex-row gap-10 ">
-          <Link href="/About" className="cursor-pointer">
-            <div>About</div>
-          </Link>
-          <Link href="Media" className="cursor-pointer">
-            <div>Media</div>
-          </Link>
+          <button
+            onClick={() => router.push("/About")}
+            className="cursor-pointer"
+          >
+            About
+          </button>
 
-          <Link href="Contact" className="cursor-pointer ">
-            <div>Contact</div>
-          </Link>
+          <button
+            onClick={() => router.push("/Media")}
+            className="cursor-pointer"
+          >
+            Media
+          </button>
+
+          <button
+            onClick={() => router.push("/Contact")}
+            className="cursor-pointer"
+          >
+            Contact
+          </button>
+
+          {session?.user.role === "admin" && status == "authenticated" ? (
+            <Link
+              href={`/admin?id=${session.user.id}`}
+              className="cursor-pointer "
+            >
+              <div>Admin</div>
+            </Link>
+          ) : (
+            ""
+          )}
+
+          {session && status == "authenticated" ? (
+            <Link href="/api/auth/signout?callbackUrl=/">
+              <div>Logout</div>
+            </Link>
+          ) : (
+            <Link href="/api/auth/signin">
+              <div>Login</div>
+            </Link>
+          )}
         </div>
 
-        
         <div className=" flex flex-row ">
-            <div className="sm:hidden block flex justify-end items-end ml-auto">
-          <BasicMenu />
-        </div>
+          <div className="sm:hidden block flex justify-end items-end ml-auto">
+            <BasicMenu />
+          </div>
           <div className="cursor-pointer rounded-full border-2 border-yellow-500 p-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
