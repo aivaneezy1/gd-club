@@ -2,6 +2,7 @@ import { connectDB } from "@/app/lib/connectDb";
 import Post from "@/app/Models/Post";
 import { NextResponse } from "next/server";
 
+// DELETE IMAGES FROM ALBUM
 export const PATCH = async (request, { params }) => {
   const { id } = params;
   const { imagesToRemove } = await request.json();
@@ -41,3 +42,5 @@ export const PATCH = async (request, { params }) => {
     return new NextResponse(err.message, { status: 500 });
   }
 };
+
+// DELETE THE ENTIRE FOLDER/ALBUM

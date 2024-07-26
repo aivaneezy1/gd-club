@@ -124,6 +124,8 @@ const Page = () => {
                 </div>
               )}
 
+
+              {/*To change the delete button */}
               {/*Delete button */}
               {hoveredIndex === index && (
                 <div className="absolute top-0 right-50">

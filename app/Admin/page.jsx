@@ -7,12 +7,13 @@ const Adminpage = () => {
   const [title, setTitle] = useState("");
   const [images, setImages] = useState([]);
   const [limit, setLimit] = useState(false);
-  const maxLimit = 3;
+  const maxLimit = 10;
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [showPublic, setShowPublic] = useState(false);
   const searchParams = useSearchParams();
   const paramsID = searchParams.get("id");
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   // Handle the title change
   const handleTitleChange = (e) => {
@@ -27,6 +28,11 @@ const Adminpage = () => {
       return;
     }
     setImages((prevImages) => [...prevImages, ...newFiles]);
+  };
+
+  // Removing unwanted images.
+  const handleRemoveImage = (i) => {
+    setImages((prevImages) => prevImages.filter((key, index) => i != index));
   };
 
   // creating a folder in s3 bucket
@@ -61,7 +67,7 @@ const Adminpage = () => {
       const formData = new FormData();
       formData.append("file", image);
       formData.append("folderName", title);
-      console.log("formdata", formData)
+      console.log("formdata", formData);
       try {
         const res = await fetch("/api/s3-upload", {
           method: "POST",
@@ -83,7 +89,7 @@ const Adminpage = () => {
     return uploadedURLs;
   };
 
-  //Saving to the database
+  //Saving Data to the database
   const handlePostData = async (e) => {
     e.preventDefault();
     try {
@@ -126,7 +132,8 @@ const Adminpage = () => {
   };
 
   const handleSwitchChange = (e) => {
-    setShowPublic(e.target.checked); // Update the state when the switch is toggled
+    // Update the state when the switch is toggled
+    setShowPublic(e.target.checked);
   };
 
   return (
@@ -161,16 +168,29 @@ const Adminpage = () => {
             images.map((image, index) => (
               <div
                 key={index}
-                className="w-32 h-32 overflow-hidden rounded-lg border border-gray-200"
+                className=" w-48 w-48 overflow-hidden rounded-lg border border-gray-200 relative"
+                 onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
               >
                 <Image
                   src={URL.createObjectURL(image)}
-                  width={150}
-                  height={150}
+                  width={200}
+                  height={200}
                   alt={image.name}
                   className="w-full h-full object-cover"
+                 
                 />
-                <h2 className="text-xs text-center mt-1">{image.name}</h2>
+
+                {hoveredIndex === index && (
+                  <div className="absolute inset-0 flex justify-center items-center">
+                    <button
+                      className="p-2 bg-red-500 rounded-lg text-white font-semibold"
+                      onClick={() => handleRemoveImage(index)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                )}
               </div>
             ))}
         </div>
