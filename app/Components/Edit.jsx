@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
 const EditComponent = () => {
-  const [title, setTitle] = useState("");
+
   const [images, setImages] = useState([]);
   const [limit, setLimit] = useState(false);
   const maxLimit = 3;
