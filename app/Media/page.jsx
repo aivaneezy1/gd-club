@@ -5,7 +5,9 @@ import MediaComponent from "../Components/Media";
 
 const MediaPage = () => {
   return (
-    <MediaComponent/>
+   <div className="">
+   <MediaComponent/>
+   </div>
   )
 };
 

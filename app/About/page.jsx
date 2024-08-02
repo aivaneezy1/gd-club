@@ -6,16 +6,16 @@ const Aboutpage = () => {
     <>
       <div className="bg-black p-8">
         <div className="flex justify-center items-center mt-5">
-          <h2 className="text-3xl text-yellow-400 font-bold border-b-4 border-double border-yellow-400">
+          <h2 className="text-3xl text-yellow-300 font-bold border-b-4 border-double border-yellow-400">
             About Us
           </h2>
         </div>
       </div>
 
       <div className="flex flex-col sm:flex-row mt-10 px-4">
-        <div className="w-full sm:w-1/2 flex flex-col  bg-black p-4 rounded-lg mb-10">
+        <div className="w-full sm:w-1/2 flex flex-col  bg-black p-4 rounded-lg mb-10 border border-white">
           <h2 className="text-xl font-bold mb-4 text-white ">Who are we?</h2>
-          <p className="text-lg text-yellow-400">
+          <p className="text-lg text-yellow-300">
             The MFC was begun with a broader vision and wanted to provide an
             organization that encouraged camaraderie between active and retired
             first responders, military veterans, and civilian patriots. At our

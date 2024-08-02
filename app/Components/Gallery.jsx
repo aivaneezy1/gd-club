@@ -28,13 +28,13 @@ const Gallery = () => {
 
   return (
     <div className="mt-10">
-      <h2 className="text-4xl font-bold text-center mb-5">Gallery</h2>
+      <h2 className="text-4xl font-bold text-center mb-5 text-white">Gallery</h2>
       {loading ? (
         <div className="flex justify-center items-center">
           <CircularIndeterminate />
         </div>
       ) : (
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 place-items-center cursor-pointer">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 place-items-center cursor-pointer w-full h-full">
           {postdata.length > 0 ? (
             postdata.map((post, index) => (
               <div key={index}>
@@ -46,7 +46,7 @@ const Gallery = () => {
                       width={250}
                       height={250}
                       alt="p"
-                      className="rounded-lg border border-4 p-2 border-yellow-500 border-double"
+                      className="rounded-lg border border-4  border-yellow-500 border-double w-full h-full"
                     />
                   </div>
                   </Link>
