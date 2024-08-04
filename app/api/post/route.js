@@ -8,7 +8,7 @@ export const POST = async (request) => {
     try {
       // Parse the JSON body of the request
       const { userId, title, images, showPublic } = await request.json();
-      console.log("Received data:", { userId, title, images, showPublic });
+
       // Connect to the database
       await connectDB();
 

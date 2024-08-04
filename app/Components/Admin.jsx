@@ -69,7 +69,6 @@ const AdminComponent = () => {
       const formData = new FormData();
       formData.append("file", image);
       formData.append("folderName", title);
-      console.log("formdata", formData);
       try {
         const res = await fetch("/api/s3-upload", {
           method: "POST",
@@ -155,6 +154,7 @@ const AdminComponent = () => {
             onChange={handleTitleChange}
             className="p-3 border border-gray-300 rounded-lg w-full"
             placeholder="Titolo della Cartella"
+            required
           />
         </div>
         <div className="mb-6">

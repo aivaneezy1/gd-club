@@ -51,11 +51,19 @@ const MediaComponent = () => {
     );
   }
 
+  // UpperCase the first letter
+  const capitalizeFirstLetter = (string) => {
+  if (typeof string !== 'string' || string.length === 0) {
+    return string; // Handle cases where input is not a string or is an empty string
+  }
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+};
+
   return (
     <div className="flex flex-col h-full ">
       <div className="bg-black p-8">
         <div className="flex justify-center items-center mt-5 relative">
-          <h2 className="text-3xl text-yellow-400 font-bold border-b-4 border-double border-yellow-400">
+          <h2 className="text-6xl text-yellow-400 font-bold border-b-4 border-double border-yellow-400">
             Media
           </h2>
         </div>
@@ -104,12 +112,12 @@ const MediaComponent = () => {
                   </div>
                 )}
 
-                <h2 className="text-xl font-bold mb-4 text-center whitespace-normal">
-                  {post.title}
+                <h2 className="text-3xl font-bold mb-4 text-center whitespace-normal">
+                  {capitalizeFirstLetter(post.title)}
                 </h2>
-                <h2 className="text-xl font-bold mb-4 text-center">
+                {/* <h2 className="text-xl font-bold mb-4 text-center">
                   {post._id}
-                </h2>
+                </h2> */}
                 <Link
                   href={`/Media/${post.title}?title=${post.title}&postid=${post._id}`}
                   className="hover:underline mt-2 text-blue-600"

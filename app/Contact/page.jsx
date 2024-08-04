@@ -5,7 +5,7 @@ const Contactpage = () => {
     <>
       <div className="bg-black p-8">
         <div className="flex justify-center items-center mt-5">
-          <h2 className="text-3xl text-yellow-300 font-bold border-b-4 border-double border-yellow-400">
+          <h2 className="text-6xl text-yellow-300 font-bold border-b-4 border-double border-yellow-400">
             Contact Us
           </h2>
         </div>

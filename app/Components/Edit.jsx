@@ -89,7 +89,7 @@ const EditComponent = () => {
   };
 
   return (
-    <div className="p-8 max-w-3xl mx-auto bg-white shadow-lg rounded-lg">
+    <div className="p-8 max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-5">
       <h1 className="text-2xl font-bold mb-4">
         Stai editando il cartello test4
       </h1>
