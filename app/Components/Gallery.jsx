@@ -28,7 +28,7 @@ const Gallery = () => {
 
   return (
     <div className="mt-10">
-      <h2 className="text-6xl font-bold text-center mb-5 text-white">Gallery</h2>
+      <h2 className="text-6wwxl font-bold text-center mb-5 text-white">Gallery</h2>
       {loading ? (
         <div className="flex justify-center items-center">
           <CircularIndeterminate />
