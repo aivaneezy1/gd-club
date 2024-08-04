@@ -5,105 +5,109 @@ const Hero = () => {
   return (
     <>
       {/*Pictures */}
-      <div className="flex flex-col md:flex-row justify-center items-center relative">
-        <div>
+      <div className="relative flex flex-col md:flex-row items-center justify-center">
+        <div className="w-full md:w-1/2">
           <Image
-            src="/soa.jpg"
+            src="https://gd-pictures.s3.eu-north-1.amazonaws.com/site-pictures/soa.jpg"
             width={1000}
             height={500}
             alt="soa"
+            layout="responsive"
           />
         </div>
-        <div>
-          <Image src="/soaBlack.jpg" width={1000} height={500} alt="soa" />
+        <div className="w-full md:w-1/2">
+          <Image
+            src="/soaBlack.jpg"
+            width={1000}
+            height={500}
+            alt="soa"
+            layout="responsive"
+          />
         </div>
-        <div className="absolute text-4xl text-yellow-500 font-bold text-center w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-55">
-          <h2 className="m-8">A motorcycle club also known as</h2>
-          <h2 className="m-8">Golden Drakes </h2>
-          <h2 className="m-8">with its roots in Italy </h2>
+        <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-center text-yellow-300 p-4">
+          <h2 className="text-4xl font-bold mb-2 md:mb-4">
+            A motorcycle club also known as
+          </h2>
+          <h2 className="text-4xl font-bold mb-2 md:mb-4">
+            Golden Drakes
+          </h2>
+          <h2 className="text-4xl font-bold mb-2 md:mb-4">
+            with its roots in Italy
+          </h2>
         </div>
       </div>
 
       {/*Welcome Sign and chapter of the club */}
-      <div className="flex flex-col md:flex-row justify-center items-center">
-        <div className="sm:w-1/2 mt-4 sm:mt-0 bg-black p-8">
-          <h2 className="text-3xl font-bold text-center sm:text-left mt-4 text-white">Welcome</h2>
-          <h2 className="mt-4 text-center text-yellow-500">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-5 mx-4 md:mx-8 my-8">
+        <div className="sm:w-1/2 bg-black p-4 lg:p-8 h-full border border-white rounded-lg shadow-lg">
+          <span className="text-2xl md:text-3xl font-bold text-center text-white mb-4 block">
+            Welcome
+          </span>
+          <p className="text-center text-yellow-300 mb-4">
             The Shadow Riders Motorcycle Club was founded in 1984 by a group of
             motorcycle enthusiasts who shared a passion for riding and a
             commitment to community service. The club started with just 10
             members who often rode together through the scenic routes of Oregon,
             seeking adventure and camaraderie.
-          </h2>
-          <h2 className="mt-4 text-center text-yellow-500">
+          </p>
+          <p className="text-center text-yellow-300">
             The SRMC is known for its annual charity rides and fundraisers.
-            Every year, they host the Ride for the Shadows, a charity ride
-            that raises funds for local homeless shelters and food banks. They
-            also participate in community clean-up events and provide support
-            for veterans through various initiatives.
-          </h2>
+            Every year, they host the Ride for the Shadows, a charity ride that
+            raises funds for local homeless shelters and food banks. They also
+            participate in community clean-up events and provide support for
+            veterans through various initiatives.
+          </p>
         </div>
-        <div className="sm:w-1/2 mt-4 sm:mt-0">
-          <Image 
-            src="/soa2.jpg" 
-            width={1000} height={500} 
-            alt="soa"/>
+        <div className="sm:w-1/2 w-full h-full">
+          <Image
+            src="https://gd-pictures.s3.eu-north-1.amazonaws.com/site-pictures/soa3.jpg"
+            width={1000}
+            height={500}
+            alt="soa"
+            layout="responsive"
+            className="w-full h-full"
+          />
         </div>
       </div>
 
       {/*Chapter of the club */}
-      <div className="flex flex-col md:flex-row justify-center items-center h-full">
-        <div className="sm:w-1/2">
-          <Image 
-            src="/soa3.jpg" 
-            width={1000} height={500} 
+      <div className="flex flex-col md:flex-row items-center justify-center gap-5 mx-4 md:mx-8 my-8">
+        <div className="hidden md:block sm:w-1/2 w-full h-full">
+          <Image
+            src="https://gd-pictures.s3.eu-north-1.amazonaws.com/site-pictures/soa3.jpg"
+            width={1000}
+            height={500}
             alt="soa"
-            className="hidden sm:block"/>
-            
-          {/*Mobile Navigation it will show this text and hide the image */}
-          <div className="block sm:hidden sm:w-1/2 mt-4 sm:mt-0 bg-black p-8 h-full ">
-            <h2 className="text-3xl font-bold text-center sm:text-left mt-4 text-white">Chapter</h2>
-            <h2 className="mt-4 text-center text-yellow-500">
-              The Shadow Riders Motorcycle Club was founded in 1984 by a group of
-              motorcycle enthusiasts who shared a passion for riding and a
-              commitment to community service. The club started with just 10
-              members who often rode together through the scenic routes of Oregon,
-              seeking adventure and camaraderie.
-            </h2>
-            <h2 className="mt-4 text-center text-yellow-500">
-              The SRMC is known for its annual charity rides and fundraisers.
-              Every year, they host the Ride for the Shadows, a charity ride
-              that raises funds for local homeless shelters and food banks. They
-              also participate in community clean-up events and provide support
-              for veterans through various initiatives.
-            </h2>
-          </div>
+            layout="responsive"
+          />
         </div>
-        <div className="sm:w-1/2 mt-4 sm:mt-0 bg-black p-8 h-full hidden sm:block">
-          <h2 className="text-3xl font-bold text-center sm:text-left mt-4 text-white">Chapter</h2>
-          <h2 className="mt-4 text-center text-yellow-500">
+        <div className="sm:w-1/2 bg-black p-6 lg:p-8 h-full border border-white rounded-lg shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-4">
+            Chapter
+          </h2>
+          <p className="text-center text-yellow-300 mb-4">
             The Shadow Riders Motorcycle Club was founded in 1984 by a group of
             motorcycle enthusiasts who shared a passion for riding and a
             commitment to community service. The club started with just 10
             members who often rode together through the scenic routes of Oregon,
             seeking adventure and camaraderie.
-          </h2>
-          <h2 className="mt-4 text-center text-yellow-500">
+          </p>
+          <p className="text-center text-yellow-300">
             The SRMC is known for its annual charity rides and fundraisers.
-            Every year, they host theRide for the Shadows, a charity ride
-            that raises funds for local homeless shelters and food banks. They
-            also participate in community clean-up events and provide support
-            for veterans through various initiatives.
-          </h2>
+            Every year, they host the Ride for the Shadows, a charity ride that
+            raises funds for local homeless shelters and food banks. They also
+            participate in community clean-up events and provide support for
+            veterans through various initiatives.
+          </p>
         </div>
-
-        {/*Mobile Navigation image will show and but hidden in bigger screen*/}
-        <div className="sm:w-1/2 block sm:hidden">
-          <Image 
-            src="/soa3.jpg" 
-            width={1000} height={500} 
+        <div className="block md:hidden sm:w-1/2 w-full h-full">
+          <Image
+            src="https://gd-pictures.s3.eu-north-1.amazonaws.com/site-pictures/soa3.jpg"
+            width={1000}
+            height={500}
             alt="soa"
-            className="hidden sm:block"/>
+            layout="responsive"
+          />
         </div>
       </div>
     </>

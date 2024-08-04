@@ -69,7 +69,6 @@ const AdminComponent = () => {
       const formData = new FormData();
       formData.append("file", image);
       formData.append("folderName", title);
-      console.log("formdata", formData);
       try {
         const res = await fetch("/api/s3-upload", {
           method: "POST",
@@ -122,6 +121,8 @@ const AdminComponent = () => {
       const data = await res.json();
       if (res.ok) {
         setMessage("Post created successfully");
+        setImages([]) // resetting the images
+        setTitle("") // resetting the title
         setError("");
  
       } else {
@@ -143,7 +144,7 @@ const AdminComponent = () => {
   };
 
   return (
-    <div className="p-8 max-w-3xl mx-auto bg-white shadow-lg rounded-lg">
+    <div className="p-8 max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-5">
       <h1 className="text-2xl font-bold mb-4">Upload Images</h1>
       <form onSubmit={handlePostData}>
         <div className="mb-6">
@@ -153,6 +154,7 @@ const AdminComponent = () => {
             onChange={handleTitleChange}
             className="p-3 border border-gray-300 rounded-lg w-full"
             placeholder="Titolo della Cartella"
+            required
           />
         </div>
         <div className="mb-6">

@@ -6,7 +6,6 @@ import Gallery from "./Components/Gallery";
 import { SessionProvider, useSession } from "next-auth/react";
 export default function Home() {
   const {data:session, status} = useSession();
-  console.log(session)
   return (
       <div>
       <h2>{session?.user.name}</h2>
