@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
         <div className="w-full md:w-1/2">
           <Image
-            src="/soaBlack.jpg"
+            src="https://gd-pictures.s3.eu-north-1.amazonaws.com/site-pictures/soaBlack.jpg"
             width={1000}
             height={500}
             alt="soa"
