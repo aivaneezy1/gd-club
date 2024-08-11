@@ -110,7 +110,7 @@ const Navbar = () => {
           Official Website of{" "}
           <span className="text-yellow-400 font-bold border-b-4 border-double border-yellow-400 whitespace-nowrap">
             {" "}
-            Golden Drakes Club{" "}
+            Yellow Dragon Club{" "}
           </span>
         </h2>
       </div>
