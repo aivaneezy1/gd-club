@@ -29,7 +29,7 @@ const Hero = () => {
             A motorcycle club also known as
           </h2>
           <h2 className="text-4xl font-bold mb-2 md:mb-4">
-            Golden Drakes
+            Yellow Dragon
           </h2>
           <h2 className="text-4xl font-bold mb-2 md:mb-4">
             with its roots in Italy
