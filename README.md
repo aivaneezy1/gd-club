@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Motorcycle Club Website
+The Motorcycle Club Website is a platform designed for motorcycle enthusiasts to explore and share their passion. The application features photo albums showcasing club events and activities, with an admin panel for managing the content.
 
-## Getting Started
 
-First, run the development server:
+## Features
+- **Photo Albums:** Users can browse and view photo albums of motorcycle club events
+- **Admin Panel:**  Only administrators can upload, edit, or delete albums and pictures, ensuring content quality and management.
+- **User Authentication:** Secure sign-up and log-in features powered by NextAuth to protect user data and access.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Frontend
+- **Next.js:** A powerful React framework for building server-rendered applications and static websites, optimized for performance and SEO.
+- **JavaScript & React:** JavaScript is used with React to create interactive and dynamic UI components.
+- **TailwindCSS:** A utility-first CSS framework that allows for rapid UI development with custom designs.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Backend
+- **Node.js:** A JavaScript runtime built on Chrome's V8 engine, used to manage server-side operations and handle quiz logic.
+- **Express.js:** A flexible Node.js web application framework that simplifies the process of building robust and scalable web applications.
 
-## Learn More
+### Database
+- **MongoDB:**  to store and manage user data, albums, and image.
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication
+- **NextAuth:**  A secure authentication solution for Next.js applications, handling sign-up, log-in, and session management.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### File Storage
+- **Amazon S3:** Used for storing and managing images securely in the cloud.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ - ## Demo
+You can view a live demo of the Quiz Game Website at the following link: https://www.yellowdragon.it/
