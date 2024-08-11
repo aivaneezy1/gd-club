@@ -6,10 +6,10 @@ import Provider from "./Context/Provider";
 export const metadata = {
   title: {
     absolute: "",
-    default: "goldendrakes",
+    default: "Yellow Dragon",
     template: "%s" 
   },
-  description: "Golden Drakes Club Official Website",
+  description: "Yellow Dragon Club Official Website",
   icons: {
     icon: ["/favicon.ico?v=4"],
     apple: ["/apple-touch-icon.png?v=4"],
